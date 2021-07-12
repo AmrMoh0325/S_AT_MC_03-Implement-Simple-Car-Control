@@ -35,8 +35,6 @@ Discarded input sections
  .bss           0x00000000        0x0 ECUAL/DC_MOTOR/DC_MOTOR.o
  .text.DCMotor_Init
                 0x00000000        0x6 ECUAL/DC_MOTOR/DC_MOTOR.o
- .text.DCMotor_start
-                0x00000000        0x2 ECUAL/DC_MOTOR/DC_MOTOR.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -54,18 +52,6 @@ Discarded input sections
  .text          0x00000000        0x0 MCAL/PWM/PWM_Cfg.o
  .data          0x00000000        0x0 MCAL/PWM/PWM_Cfg.o
  .bss           0x00000000        0x0 MCAL/PWM/PWM_Cfg.o
- .text          0x00000000        0x0 MCAL/TIMER/TM_Cfg.o
- .data          0x00000000        0x0 MCAL/TIMER/TM_Cfg.o
- .bss           0x00000000        0x0 MCAL/TIMER/TM_Cfg.o
- .debug_line    0x00000000        0x0 MCAL/TIMER/TM_Cfg.o
- .debug_str     0x00000000      0x122 MCAL/TIMER/TM_Cfg.o
- .comment       0x00000000       0x31 MCAL/TIMER/TM_Cfg.o
- .text          0x00000000        0x0 MCAL/TIMER/TM_prog.o
- .data          0x00000000        0x0 MCAL/TIMER/TM_prog.o
- .bss           0x00000000        0x0 MCAL/TIMER/TM_prog.o
- .debug_line    0x00000000        0x0 MCAL/TIMER/TM_prog.o
- .debug_str     0x00000000      0x123 MCAL/TIMER/TM_prog.o
- .comment       0x00000000       0x31 MCAL/TIMER/TM_prog.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -196,8 +182,6 @@ LOAD MCAL/DIO/DIO_cfg.o
 LOAD MCAL/DIO/DIO_prog.o
 LOAD MCAL/PWM/PWM.o
 LOAD MCAL/PWM/PWM_Cfg.o
-LOAD MCAL/TIMER/TM_Cfg.o
-LOAD MCAL/TIMER/TM_prog.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -584,39 +568,39 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x150
+.debug_aranges  0x00000000      0x148
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 APP/Car_Ctrl_System/CAR.o
  .debug_aranges
                 0x00000028       0x28 ECUAL/BTN/BTN.o
  .debug_aranges
-                0x00000050       0x40 ECUAL/DC_MOTOR/DC_MOTOR.o
+                0x00000050       0x38 ECUAL/DC_MOTOR/DC_MOTOR.o
  .debug_aranges
-                0x00000090       0x20 main.o
+                0x00000088       0x20 main.o
  .debug_aranges
-                0x000000b0       0x18 MCAL/DIO/DIO_cfg.o
+                0x000000a8       0x18 MCAL/DIO/DIO_cfg.o
  .debug_aranges
-                0x000000c8       0x38 MCAL/DIO/DIO_prog.o
+                0x000000c0       0x38 MCAL/DIO/DIO_prog.o
  .debug_aranges
-                0x00000100       0x38 MCAL/PWM/PWM.o
+                0x000000f8       0x38 MCAL/PWM/PWM.o
  .debug_aranges
-                0x00000138       0x18 MCAL/PWM/PWM_Cfg.o
+                0x00000130       0x18 MCAL/PWM/PWM_Cfg.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x168c
+.debug_info     0x00000000     0x165e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6      0x361 APP/Car_Ctrl_System/CAR.o
  .debug_info    0x00000847      0x1b2 ECUAL/BTN/BTN.o
- .debug_info    0x000009f9      0x30d ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_info    0x00000d06       0xa7 main.o
- .debug_info    0x00000dad      0x1e0 MCAL/DIO/DIO_cfg.o
- .debug_info    0x00000f8d      0x2f5 MCAL/DIO/DIO_prog.o
- .debug_info    0x00001282      0x260 MCAL/PWM/PWM.o
- .debug_info    0x000014e2      0x1aa MCAL/PWM/PWM_Cfg.o
+ .debug_info    0x000009f9      0x2df ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_info    0x00000cd8       0xa7 main.o
+ .debug_info    0x00000d7f      0x1e0 MCAL/DIO/DIO_cfg.o
+ .debug_info    0x00000f5f      0x2f5 MCAL/DIO/DIO_prog.o
+ .debug_info    0x00001254      0x260 MCAL/PWM/PWM.o
+ .debug_info    0x000014b4      0x1aa MCAL/PWM/PWM_Cfg.o
 
 .debug_abbrev   0x00000000      0xac9
  *(.debug_abbrev)
@@ -630,54 +614,54 @@ END GROUP
  .debug_abbrev  0x0000095f       0xeb MCAL/PWM/PWM.o
  .debug_abbrev  0x00000a4a       0x7f MCAL/PWM/PWM_Cfg.o
 
-.debug_line     0x00000000      0xc91
+.debug_line     0x00000000      0xc7a
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116      0x2aa APP/Car_Ctrl_System/CAR.o
  .debug_line    0x000003c0      0x147 ECUAL/BTN/BTN.o
- .debug_line    0x00000507      0x1e3 ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_line    0x000006ea       0x69 main.o
- .debug_line    0x00000753       0x41 MCAL/DIO/DIO_cfg.o
- .debug_line    0x00000794      0x2d7 MCAL/DIO/DIO_prog.o
- .debug_line    0x00000a6b      0x1ea MCAL/PWM/PWM.o
- .debug_line    0x00000c55       0x3c MCAL/PWM/PWM_Cfg.o
+ .debug_line    0x00000507      0x1cc ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_line    0x000006d3       0x69 main.o
+ .debug_line    0x0000073c       0x41 MCAL/DIO/DIO_cfg.o
+ .debug_line    0x0000077d      0x2d7 MCAL/DIO/DIO_prog.o
+ .debug_line    0x00000a54      0x1ea MCAL/PWM/PWM.o
+ .debug_line    0x00000c3e       0x3c MCAL/PWM/PWM_Cfg.o
 
-.debug_frame    0x00000000      0x1f8
+.debug_frame    0x00000000      0x1e8
  *(.debug_frame)
  .debug_frame   0x00000000       0x44 APP/Car_Ctrl_System/CAR.o
  .debug_frame   0x00000044       0x7c ECUAL/BTN/BTN.o
- .debug_frame   0x000000c0       0x6c ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_frame   0x0000012c       0x24 main.o
- .debug_frame   0x00000150       0x54 MCAL/DIO/DIO_prog.o
- .debug_frame   0x000001a4       0x54 MCAL/PWM/PWM.o
+ .debug_frame   0x000000c0       0x5c ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_frame   0x0000011c       0x24 main.o
+ .debug_frame   0x00000140       0x54 MCAL/DIO/DIO_prog.o
+ .debug_frame   0x00000194       0x54 MCAL/PWM/PWM.o
 
-.debug_str      0x00000000      0x81d
+.debug_str      0x00000000      0x80f
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x2d3 APP/Car_Ctrl_System/CAR.o
                                 0x2f4 (size before relaxing)
  .debug_str     0x00000469       0x72 ECUAL/BTN/BTN.o
                                 0x22a (size before relaxing)
- .debug_str     0x000004db       0x6b ECUAL/DC_MOTOR/DC_MOTOR.o
-                                0x26f (size before relaxing)
- .debug_str     0x00000546       0x11 main.o
+ .debug_str     0x000004db       0x5d ECUAL/DC_MOTOR/DC_MOTOR.o
+                                0x261 (size before relaxing)
+ .debug_str     0x00000538       0x11 main.o
                                 0x186 (size before relaxing)
- .debug_str     0x00000557       0xc7 MCAL/DIO/DIO_cfg.o
+ .debug_str     0x00000549       0xc7 MCAL/DIO/DIO_cfg.o
                                 0x228 (size before relaxing)
- .debug_str     0x0000061e       0x3b MCAL/DIO/DIO_prog.o
+ .debug_str     0x00000610       0x3b MCAL/DIO/DIO_prog.o
                                 0x297 (size before relaxing)
- .debug_str     0x00000659      0x1ae MCAL/PWM/PWM.o
+ .debug_str     0x0000064b      0x1ae MCAL/PWM/PWM.o
                                 0x35b (size before relaxing)
- .debug_str     0x00000807       0x16 MCAL/PWM/PWM_Cfg.o
+ .debug_str     0x000007f9       0x16 MCAL/PWM/PWM_Cfg.o
                                 0x308 (size before relaxing)
 
-.debug_loc      0x00000000      0x587
+.debug_loc      0x00000000      0x566
  *(.debug_loc)
  .debug_loc     0x00000000       0x48 APP/Car_Ctrl_System/CAR.o
  .debug_loc     0x00000048      0x1ea ECUAL/BTN/BTN.o
- .debug_loc     0x00000232      0x18c ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_loc     0x000003be      0x184 MCAL/DIO/DIO_prog.o
- .debug_loc     0x00000542       0x45 MCAL/PWM/PWM.o
+ .debug_loc     0x00000232      0x16b ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_loc     0x0000039d      0x184 MCAL/DIO/DIO_prog.o
+ .debug_loc     0x00000521       0x45 MCAL/PWM/PWM.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -697,14 +681,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xd8
+.debug_ranges   0x00000000       0xd0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x18 APP/Car_Ctrl_System/CAR.o
  .debug_ranges  0x00000018       0x30 ECUAL/BTN/BTN.o
- .debug_ranges  0x00000048       0x30 ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_ranges  0x00000078       0x10 main.o
- .debug_ranges  0x00000088       0x28 MCAL/DIO/DIO_prog.o
- .debug_ranges  0x000000b0       0x28 MCAL/PWM/PWM.o
+ .debug_ranges  0x00000048       0x28 ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_ranges  0x00000070       0x10 main.o
+ .debug_ranges  0x00000080       0x28 MCAL/DIO/DIO_prog.o
+ .debug_ranges  0x000000a8       0x28 MCAL/PWM/PWM.o
 
 .debug_macro
  *(.debug_macro)

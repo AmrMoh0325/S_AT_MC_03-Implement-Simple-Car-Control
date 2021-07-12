@@ -173,21 +173,6 @@
     <Compile Include="MCAL\PWM\TM_registers.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MCAL\TIMER\TM_Cfg.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MCAL\TIMER\TM_Cfg.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MCAL\TIMER\TM_Int.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MCAL\TIMER\TM_prog.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MCAL\TIMER\TM_registers.h">
-      <SubType>compile</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
@@ -198,7 +183,6 @@
     <Folder Include="ECUAL" />
     <Folder Include="MCAL\DIO" />
     <Folder Include="MCAL\PWM" />
-    <Folder Include="MCAL\TIMER" />
     <Folder Include="LIB" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

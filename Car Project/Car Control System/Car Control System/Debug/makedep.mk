@@ -18,7 +18,3 @@ MCAL\PWM\PWM.c
 
 MCAL\PWM\PWM_Cfg.c
 
-MCAL\TIMER\TM_Cfg.c
-
-MCAL\TIMER\TM_prog.c
-

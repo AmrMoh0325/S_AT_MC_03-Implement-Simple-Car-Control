@@ -1,1 +1,0 @@
-MCAL/TIMER/TM_Cfg.d MCAL/TIMER/TM_Cfg.o: ../MCAL/TIMER/TM_Cfg.c
