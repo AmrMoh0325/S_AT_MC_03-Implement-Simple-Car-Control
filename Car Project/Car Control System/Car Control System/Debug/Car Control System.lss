@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 00000148  00000000  00000000  00000c18  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000165e  00000000  00000000  00000d60  2**0
+  6 .debug_info   00001653  00000000  00000000  00000d60  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000ac9  00000000  00000000  000023be  2**0
+  7 .debug_abbrev 00000abc  00000000  00000000  000023b3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000c7a  00000000  00000000  00002e87  2**0
+  8 .debug_line   00000c7a  00000000  00000000  00002e6f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000001e8  00000000  00000000  00003b04  2**2
+  9 .debug_frame  000001e8  00000000  00000000  00003aec  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000080f  00000000  00000000  00003cec  2**0
+ 10 .debug_str    0000080f  00000000  00000000  00003cd4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000566  00000000  00000000  000044fb  2**0
+ 11 .debug_loc    00000566  00000000  00000000  000044e3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000000d0  00000000  00000000  00004a61  2**0
+ 12 .debug_ranges 000000d0  00000000  00000000  00004a49  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -228,7 +228,7 @@ void App_Update(void)
  156:	81 e0       	ldi	r24, 0x01	; 1
  158:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <DCMotor_stop>
 		switch(enuCarSpeed)
- 15c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 15c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
  160:	82 30       	cpi	r24, 0x02	; 2
  162:	e1 f0       	breq	.+56     	; 0x19c <App_Update+0xec>
  164:	28 f4       	brcc	.+10     	; 0x170 <App_Update+0xc0>
@@ -249,7 +249,7 @@ void App_Update(void)
  17a:	10 92 94 00 	sts	0x0094, r1	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_0;
  17e:	81 e0       	ldi	r24, 0x01	; 1
- 180:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 180:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
 				genuMotorDirection = FORWARD;
  184:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -262,7 +262,7 @@ void App_Update(void)
  18c:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_30;
  190:	82 e0       	ldi	r24, 0x02	; 2
- 192:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 192:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
 				genuMotorDirection = FORWARD;
  196:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -275,7 +275,7 @@ void App_Update(void)
  19e:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_60;
  1a2:	83 e0       	ldi	r24, 0x03	; 3
- 1a4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 1a4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
 				genuMotorDirection = FORWARD;
  1a8:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -288,7 +288,7 @@ void App_Update(void)
  1b0:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_90;
  1b4:	84 e0       	ldi	r24, 0x04	; 4
- 1b6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 1b6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
 				genuMotorDirection = FORWARD;
  1ba:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -301,7 +301,7 @@ void App_Update(void)
  1c0:	8e e1       	ldi	r24, 0x1E	; 30
  1c2:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_NEG_30;
- 1c6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__data_start>
+ 1c6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
 				genuMotorDirection = BACKWARD;
  1ca:	81 e0       	ldi	r24, 0x01	; 1
  1cc:	80 93 96 00 	sts	0x0096, r24	; 0x800096 <genuMotorDirection>

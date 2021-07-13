@@ -8,7 +8,6 @@
 
 #include "DC_MOTOR.h"
 
-static enuMotorDirection_t genuMotorDirection ;
 
 /*- FUNCTION PROTOTYPES ----------------------------------*/
 /*************************************************************************************************

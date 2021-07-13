@@ -460,7 +460,7 @@ END GROUP
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.enuCarSpeed.1725
+ .data.enuCarSpeed.1723
                 0x00800060        0x1 APP/Car_Ctrl_System/CAR.o
  *(.gnu.linkonce.d*)
  *(.rodata)
@@ -481,7 +481,7 @@ END GROUP
                 0x00800094                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.u8DutyCycle.1726
+ .bss.u8DutyCycle.1724
                 0x00800094        0x1 APP/Car_Ctrl_System/CAR.o
  .bss.u8_HeldFlag.1652
                 0x00800095        0x1 ECUAL/BTN/BTN.o
@@ -590,29 +590,29 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x165e
+.debug_info     0x00000000     0x1653
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6      0x361 APP/Car_Ctrl_System/CAR.o
  .debug_info    0x00000847      0x1b2 ECUAL/BTN/BTN.o
- .debug_info    0x000009f9      0x2df ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_info    0x00000cd8       0xa7 main.o
- .debug_info    0x00000d7f      0x1e0 MCAL/DIO/DIO_cfg.o
- .debug_info    0x00000f5f      0x2f5 MCAL/DIO/DIO_prog.o
- .debug_info    0x00001254      0x260 MCAL/PWM/PWM.o
- .debug_info    0x000014b4      0x1aa MCAL/PWM/PWM_Cfg.o
+ .debug_info    0x000009f9      0x2d4 ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_info    0x00000ccd       0xa7 main.o
+ .debug_info    0x00000d74      0x1e0 MCAL/DIO/DIO_cfg.o
+ .debug_info    0x00000f54      0x2f5 MCAL/DIO/DIO_prog.o
+ .debug_info    0x00001249      0x260 MCAL/PWM/PWM.o
+ .debug_info    0x000014a9      0x1aa MCAL/PWM/PWM_Cfg.o
 
-.debug_abbrev   0x00000000      0xac9
+.debug_abbrev   0x00000000      0xabc
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_abbrev  0x000004a3       0xdb APP/Car_Ctrl_System/CAR.o
  .debug_abbrev  0x0000057e      0x107 ECUAL/BTN/BTN.o
- .debug_abbrev  0x00000685       0xe6 ECUAL/DC_MOTOR/DC_MOTOR.o
- .debug_abbrev  0x0000076b       0x68 main.o
- .debug_abbrev  0x000007d3       0x9a MCAL/DIO/DIO_cfg.o
- .debug_abbrev  0x0000086d       0xf2 MCAL/DIO/DIO_prog.o
- .debug_abbrev  0x0000095f       0xeb MCAL/PWM/PWM.o
- .debug_abbrev  0x00000a4a       0x7f MCAL/PWM/PWM_Cfg.o
+ .debug_abbrev  0x00000685       0xd9 ECUAL/DC_MOTOR/DC_MOTOR.o
+ .debug_abbrev  0x0000075e       0x68 main.o
+ .debug_abbrev  0x000007c6       0x9a MCAL/DIO/DIO_cfg.o
+ .debug_abbrev  0x00000860       0xf2 MCAL/DIO/DIO_prog.o
+ .debug_abbrev  0x00000952       0xeb MCAL/PWM/PWM.o
+ .debug_abbrev  0x00000a3d       0x7f MCAL/PWM/PWM_Cfg.o
 
 .debug_line     0x00000000      0xc7a
  *(.debug_line .debug_line.* .debug_line_end)
@@ -643,7 +643,7 @@ END GROUP
  .debug_str     0x00000469       0x72 ECUAL/BTN/BTN.o
                                 0x22a (size before relaxing)
  .debug_str     0x000004db       0x5d ECUAL/DC_MOTOR/DC_MOTOR.o
-                                0x261 (size before relaxing)
+                                0x24e (size before relaxing)
  .debug_str     0x00000538       0x11 main.o
                                 0x186 (size before relaxing)
  .debug_str     0x00000549       0xc7 MCAL/DIO/DIO_cfg.o
