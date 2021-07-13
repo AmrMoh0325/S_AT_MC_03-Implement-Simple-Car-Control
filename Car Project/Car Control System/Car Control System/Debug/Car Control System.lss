@@ -228,7 +228,7 @@ void App_Update(void)
  156:	81 e0       	ldi	r24, 0x01	; 1
  158:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <DCMotor_stop>
 		switch(enuCarSpeed)
- 15c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 15c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
  160:	82 30       	cpi	r24, 0x02	; 2
  162:	e1 f0       	breq	.+56     	; 0x19c <App_Update+0xec>
  164:	28 f4       	brcc	.+10     	; 0x170 <App_Update+0xc0>
@@ -249,7 +249,7 @@ void App_Update(void)
  17a:	10 92 94 00 	sts	0x0094, r1	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_0;
  17e:	81 e0       	ldi	r24, 0x01	; 1
- 180:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 180:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
 				genuMotorDirection = FORWARD;
  184:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -262,7 +262,7 @@ void App_Update(void)
  18c:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_30;
  190:	82 e0       	ldi	r24, 0x02	; 2
- 192:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 192:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
 				genuMotorDirection = FORWARD;
  196:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -275,7 +275,7 @@ void App_Update(void)
  19e:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_60;
  1a2:	83 e0       	ldi	r24, 0x03	; 3
- 1a4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1a4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
 				genuMotorDirection = FORWARD;
  1a8:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -288,7 +288,7 @@ void App_Update(void)
  1b0:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_90;
  1b4:	84 e0       	ldi	r24, 0x04	; 4
- 1b6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1b6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
 				genuMotorDirection = FORWARD;
  1ba:	10 92 96 00 	sts	0x0096, r1	; 0x800096 <genuMotorDirection>
 			}
@@ -301,7 +301,7 @@ void App_Update(void)
  1c0:	8e e1       	ldi	r24, 0x1E	; 30
  1c2:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <__data_end>
 				enuCarSpeed = SPEED_NEG_30;
- 1c6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1c6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__data_start>
 				genuMotorDirection = BACKWARD;
  1ca:	81 e0       	ldi	r24, 0x01	; 1
  1cc:	80 93 96 00 	sts	0x0096, r24	; 0x800096 <genuMotorDirection>
@@ -397,7 +397,7 @@ enuErrorStatus_t	BTN_getState(uint8_t u8_BtnNum, enuBTNStatus_t* enuBTNStatus)
 
 		DIO_Read(u8_BtnNum, &u8_Data);
 
-		while(u8_Data == LOW && u64_Counter < 10000)
+		while(u8_Data == LOW && u64_Counter < HOLD_DELAY)
  230:	19 c0       	rjmp	.+50     	; 0x264 <BTN_getState+0x7a>
 		{
 			u64_Counter++;
@@ -430,7 +430,7 @@ enuErrorStatus_t	BTN_getState(uint8_t u8_BtnNum, enuBTNStatus_t* enuBTNStatus)
 
 		DIO_Read(u8_BtnNum, &u8_Data);
 
-		while(u8_Data == LOW && u64_Counter < 10000)
+		while(u8_Data == LOW && u64_Counter < HOLD_DELAY)
  264:	89 81       	ldd	r24, Y+1	; 0x01
  266:	81 11       	cpse	r24, r1
  268:	12 c0       	rjmp	.+36     	; 0x28e <BTN_getState+0xa4>
@@ -456,7 +456,7 @@ enuErrorStatus_t	BTN_getState(uint8_t u8_BtnNum, enuBTNStatus_t* enuBTNStatus)
 			u64_Counter++;
 			DIO_Read(u8_BtnNum, &u8_Data);
 		}
-		if(u64_Counter == 10000)
+		if(u64_Counter == HOLD_DELAY)
  28e:	2a 2d       	mov	r18, r10
  290:	3b 2d       	mov	r19, r11
  292:	4e 2d       	mov	r20, r14
@@ -484,7 +484,7 @@ enuErrorStatus_t	BTN_getState(uint8_t u8_BtnNum, enuBTNStatus_t* enuBTNStatus)
  2b8:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <u8_HeldFlag.1652>
  2bc:	21 c0       	rjmp	.+66     	; 0x300 <BTN_getState+0x116>
 		}
-		else if(u64_Counter < 10000 && u64_Counter > 0 && u8_HeldFlag == 0)
+		else if(u64_Counter < HOLD_DELAY && u64_Counter > 0 && u8_HeldFlag == 0)
  2be:	2a 2d       	mov	r18, r10
  2c0:	3b 2d       	mov	r19, r11
  2c2:	4e 2d       	mov	r20, r14

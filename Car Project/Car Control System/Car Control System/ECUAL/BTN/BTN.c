@@ -10,7 +10,7 @@
 /*- INCLUDES----------------------------------------------*/
 #include "BTN.h"
 
-
+#define HOLD_DELAY      10000
 /*- APIs IMPLEMENTATION-----------------------------------*/
 
 /*************************************************************************************************
@@ -44,17 +44,17 @@ enuErrorStatus_t	BTN_getState(uint8_t u8_BtnNum, enuBTNStatus_t* enuBTNStatus)
 
 		DIO_Read(u8_BtnNum, &u8_Data);
 
-		while(u8_Data == LOW && u64_Counter < 10000)
+		while(u8_Data == LOW && u64_Counter < HOLD_DELAY)
 		{
 			u64_Counter++;
 			DIO_Read(u8_BtnNum, &u8_Data);
 		}
-		if(u64_Counter == 10000)
+		if(u64_Counter == HOLD_DELAY)
 		{
 			*enuBTNStatus = HELD;
 			u8_HeldFlag = 1;
 		}
-		else if(u64_Counter < 10000 && u64_Counter > 0 && u8_HeldFlag == 0)
+		else if(u64_Counter < HOLD_DELAY && u64_Counter > 0 && u8_HeldFlag == 0)
 		{
 			*enuBTNStatus = PRESSED;
 		}
